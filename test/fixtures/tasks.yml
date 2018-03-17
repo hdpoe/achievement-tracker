@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  start_time: 2018-03-17 16:00:45
+  completion_time: 2018-03-17 16:00:45
+  task_state_id: 1
+
+two:
+  title: MyString
+  description: MyString
+  start_time: 2018-03-17 16:00:45
+  completion_time: 2018-03-17 16:00:45
+  task_state_id: 1
