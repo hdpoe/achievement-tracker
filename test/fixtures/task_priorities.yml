@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 500
+  importance: 'high'
+  description: MyString
+
+two:
+  level: 600
+  importance: 'low'
+  description: MyString

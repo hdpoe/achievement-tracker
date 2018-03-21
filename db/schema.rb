@@ -10,17 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313185913) do
+ActiveRecord::Schema.define(version: 20180317232734) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "task_priorities", force: :cascade do |t|
+    t.string "level", null: false
+    t.integer "importance", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "task_states", force: :cascade do |t|
+    t.string "state"
+    t.integer "state_order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "display", null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string "title", null: false
-    t.string "descr"
-    t.integer "state_id", null: false
+    t.string "description", null: false
     t.datetime "start_time"
-    t.datetime "completed_time"
+    t.datetime "completion_time"
+    t.integer "task_state_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["state_id"], name: "index_tasks_on_state_id"
+    t.integer "task_priority_id", null: false
+    t.index ["task_state_id"], name: "index_tasks_on_task_state_id"
   end
 
 end
