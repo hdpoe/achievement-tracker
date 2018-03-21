@@ -12,7 +12,7 @@ default: &default
 development:
   <<: *default
   adapter: postgresql
-  database: achivement_tracker
+  database: achievement_tracker
   encoding: unicode
 
 
@@ -22,7 +22,7 @@ development:
 test:
   <<: *default
   adapter: postgresql
-  database: achivement_tracker_test
+  database: achievement_tracker_test 
   encoding: unicode
 
 production:
