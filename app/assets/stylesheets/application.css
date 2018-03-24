@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ main { 
+  align-items: center;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #bbb;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  box-shadow: 0 1em #ccc;
+  padding-bottom: 2.5em;
+  padding-top: 2.5em;
+  text-align: center;
+  vertical-align: central;
+  width: 100%;
+}
