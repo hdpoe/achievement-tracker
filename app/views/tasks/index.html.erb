@@ -2,33 +2,10 @@
 
 <h1>Tasks</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Start time</th>
-      <th>Completion time</th>
-      <th>Task state</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.title %></td>
-        <td><%= task.description %></td>
-        <td><%= task.start_time %></td>
-        <td><%= task.completion_time %></td>
-        <td><%= task.task_state_id %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @tasks.each do |task| %>
+  <%= react_component('TaskDisplay',  task: task.as_json ) %>
+<% end %>
 
 <%# Have this so I remember how to call react compnents. <%= react_component('HelloWorld') %> 
 

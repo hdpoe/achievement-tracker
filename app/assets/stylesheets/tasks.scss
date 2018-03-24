@@ -1,3 +1,14 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$background-color: #fff;
+$primary-color: #000;
+$secondary-color: #888;
+
+div.single-task { 
+  background-color: $background-color;
+  border: 5px $primary-color solid;
+  border-radius: 5px;
+  padding: 10px;
+}
