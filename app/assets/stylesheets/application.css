@@ -35,3 +35,11 @@ header {
   vertical-align: central;
   width: 100%;
 }
+
+.margin-left { 
+  margin: 0 1em 0 0;
+}
+
+.margin-right { 
+  margin: 0 0 0 1em;
+}

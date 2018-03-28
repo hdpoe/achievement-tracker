@@ -3,9 +3,7 @@
 <h1>Tasks</h1>
 
 
-<% @tasks.each do |task| %>
-  <%= react_component('TaskDisplay',  task: task.as_json ) %>
-<% end %>
+<% react_component('TaskList', tasks: @tasks) %>
 
 <%# Have this so I remember how to call react compnents. <%= react_component('HelloWorld') %> 
 

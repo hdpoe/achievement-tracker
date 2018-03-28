@@ -1,6 +1,5 @@
-class DateTimeFormatter extends React.Component {
-  render() { 
-    let datetime = new Date(this.props.datetime);
+const DateTimeFormatter = (props) => {
+    let datetime = new Date(props.datetime);
     let months = [
       'Jan',
       'Feb',
@@ -15,8 +14,6 @@ class DateTimeFormatter extends React.Component {
       'Nov',
       'Dec'
     ];
-    return (
-      <span>{months[datetime.getMonth()]} {datetime.getDate()} {datetime.getFullYear()}</span>
-    );
+    return <span>{months[datetime.getMonth()]} {datetime.getDate()} {datetime.getFullYear()}</span>;
   }
-}
+
