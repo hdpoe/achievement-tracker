@@ -1,9 +1,7 @@
 const TaskList = (props) => {
-  let tasks = [];
-  props.tasks.forEach((task) => {
-    tasks.concat(<TaskDisplay task={task} />)
-  });
-  console.log(tasks);
-  return tasks;
+  return <div className="task-list">
+    <div className="task-list-header">Tasks Remaining: {props.tasks.length}</div>
+    {(props.tasks.map((task) => <TaskDisplay key={task.title} task={task} />))}
+  </div>
 }
 
